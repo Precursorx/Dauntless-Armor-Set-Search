@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		.newsbox{
+			float:right;
+			padding-right: 50px;
+		}
+		table{
+			width:100%;
+		}
+		table, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		tr:nth-child(12n+1), tr:nth-child(12n+2), tr:nth-child(12n+3), tr:nth-child(12n+4), tr:nth-child(12n+5), tr:nth-child(12n+6){
+			background-color: #dddddd;
+		}
+	</style>
+	<head>
+	<meta charset="utf-8"/>
+    <base target="_top">
+	<script>
+	</script>
+	</head>
+	<body>
+		<h1>Dauntless Armor Set Search</h1>
+		<select id="Weapon_Type" onchange="wTc()">
+			<option value="Axe">Axe</option>
+			<option value="ChainBlades">Chain Blades</option>
+			<option value="Hammer">Hammer</option>
+			<option value="Repeater">Repeater</option>
+			<option value="Sword">Sword</option>
+			<option value="WarPike">War Pike</option>
+		</select>
+		<select id="Axe" class="types" style="display: inline" onchange="wTc()">
+			<option value="Recruit">Recruit's Axe</option>
+			<option value="Gnasher">Raging Bite</option>
+			<option value="Shrike">Song of the Shrike</option>
+			<option value="Quill">Quillshot's Fury</option>
+			<option value="Skarn">Skarn's Judgement</option>
+			<option value="Charr">Charred Cleaver</option>
+			<option value="Ember">Ember Scythe</option>
+			<option value="Screaw">Winter Gale</option>
+			<option value="Drask">Thundering Scythe</option>
+			<option value="Nayzaga">Nayzaga's Scythe</option>
+			<option value="Pangar">Pangar's Grace</option>
+			<option value="Hellion">Inferno's Decree</option>
+			<option value="Storm">Storm Cutter</option>
+			<option value="Khara">Kharabak's Claw</option>
+			<option value="Reza">Edge of Dawn</option>
+			<option value="Shrowd">Reaper of Night</option>
+			<option value="Koshai">Sovereign's Wrath</option>
+			<option value="Rift">Stalker's Mercy</option>
+			<option value="Valomyr">Valomyr's Decree</option>
+			<option value="Boreus">Turmoil of Boreus</option>
+		</select>
+		<select id="ChainBlades" class="types" style="display: none" onchange="wTc()">
+			<option value="Recruit">Recruit's Chain Blades</option>
+			<option value="Gnasher">Raging Teeth</option>
+			<option value="Shrike">Flight of the Shrike</option>
+			<option value="Quill">Quillshot's Bonehooks</option>
+			<option value="Skarn">Skarn's Malice</option>
+			<option value="Charr">Charred Blades</option>
+			<option value="Ember">Ember Blades</option>
+			<option value="Screaw">Winter Winds</option>
+			<option value="Drask">Thundering Cutters</option>
+			<option value="Nayzaga">Nayzaga's Reach</option>
+			<option value="Pangar">Pangar's Claws</option>
+			<option value="Hellion">Inferno's Fangs</option>
+			<option value="Storm">Storm Blades</option>
+			<option value="Khara">Kharabak's Wings</option>
+			<option value="Reza">Fangs of Dawn</option>
+			<option value="Shrowd">Eyes of Night</option>
+			<option value="Koshai">Sovereign's Lash</option>
+			<option value="Rift">Stalker's Trap</option>
+			<option value="Valomyr">Valomyr's Revenge</option>
+			<option value="Boreus">Destiny of Boreus</option>
+		</select>
+		<select id="Hammer" class="types" style="display: none" onchange="wTc()">
+			<option value="Recruit">Recruit's Hammer</option>
+			<option value="Gnasher">Raging Crash</option>
+			<option value="Shrike">Fall of the Shrike</option>
+			<option value="Quill">Quillshot's Roar‎</option>
+			<option value="Skarn">Skarn's Vengeance</option>
+			<option value="Charr">Charred Crusher</option>
+			<option value="Ember">Ember Maul</option>
+			<option value="Screaw">Winter Squall‎</option>
+			<option value="Drask">Thundering Maul‎‎</option>
+			<option value="Nayzaga">Nayzaga's Charge‎</option>
+			<option value="Pangar">Pangar's Rampage</option>
+			<option value="Hellion">Inferno's Burden</option>
+			<option value="Storm">Storm Hammer</option>
+			<option value="Khara">Kharabak's Jaw</option>
+			<option value="Reza">Break of Dawn</option>
+			<option value="Shrowd">Fall of Night</option>
+			<option value="Koshai">Sovereign's Grudge</option>
+			<option value="Rift">Stalker's Price</option>
+			<option value="Valomyr">Valomyr's Burden</option>
+			<option value="Boreus">Brutality of Boreus</option>
+			<option value="Exotic">Molten Edict</option>
+		</select>
+		<select id="Repeater" class="types" style="display: none" disabled>
+			<option value="Exotic">Repeater</option>
+		</select>
+		<select id="Sword" class="types" style="display: none" onchange="wTc()">
+			<option value="Recruit">Recruit's Sword</option>
+			<option value="Gnasher">Raging Blade</option>
+			<option value="Shrike">Cry of the Shrike</option>
+			<option value="Quill">Quillshot's Tusk</option>
+			<option value="Skarn">Skarn's Rancor</option>
+			<option value="Charr">Charred Saber</option>
+			<option value="Ember">Ember Cutlass</option>
+			<option value="Screaw">Winter Ice</option>
+			<option value="Drask">Thundering Blade</option>
+			<option value="Nayzaga">Nayzaga's Razor</option>
+			<option value="Pangar">Pangar's Call</option>
+			<option value="Hellion">Inferno's Razor</option>
+			<option value="Storm">Storm Sword</option>
+			<option value="Khara">Kharabak's Spur</option>
+			<option value="Reza">Call of Dawn</option>
+			<option value="Shrowd">Verge of Night</option>
+			<option value="Koshai">Sovereign's Torment</option>
+			<option value="Rift">Stalker's Strike</option>
+			<option value="Valomyr">Valomyr's Regard</option>
+			<option value="Boreus">Onus of Boreus</option>
+			<option value="Exotic">The Hunger</option>
+		</select>
+		<select id="WarPike" class="types" style="display: none" onchange="wTc()">
+			<option value="Recruit">Recruit's War Pike</option>
+			<option value="Gnasher">Raging Cruelty</option>
+			<option value="Shrike">Scream of the Shrike</option>
+			<option value="Quill">Quillshot's Javelin</option>
+			<option value="Skarn">Skarn's Spite</option>
+			<option value="Charr">Charred Spear</option>
+			<option value="Ember">Ember Pike</option>
+			<option value="Screaw">Winter Vortex</option>
+			<option value="Drask">Thundering Spear</option>
+			<option value="Nayzaga">Nayzaga's Fang</option>
+			<option value="Pangar">Pangar's Tooth</option>
+			<option value="Hellion">Inferno's Arrow</option>
+			<option value="Storm">Storm Pike</option>
+			<option value="Khara">Kharabak's Sting</option>
+			<option value="Reza">Spire of Dawn</option>
+			<option value="Shrowd">Gyre of Night</option>
+			<option value="Koshai">Sovereign's Sorrow</option>
+			<option value="Rift">Stalker's Spike</option>
+			<option value="Valomyr">Valomyr's Hope</option>
+			<option value="Boreus">Revolution of Boreus</option>
+			<option value="Exotic">The Godhand</option>
+		</select>
+		<select id="helm" style="display:inline" onchange="wTc()">
+			<option value="none"></option>
+			<option value="Reza">Prismatic Grace</option>
+			<option value="Shrowd">Tragic Echo</option>
+			<option value="Charr">The Skullforge</option>
+		</select>
+		<p id="console" style="display:inline;color:red"><p>
+		<div class="newsbox">
+			<p>Version 0.2.1:</p>
+			<ul>
+			<li>change 1</li>
+			<li>change 2</li>
+			<li>change 3</li>
+			</ul>
+			<p>Github Link</p>
+		</div>
+		<form>
+			<select id="perk1show" onchange="checkPerk('1')" disabled>
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<input id="perk1" hidden></input>
+			<div style="display: none" id="pr1"><input onchange="radCount()" name="p1" type="radio" checked value="0">0<input onchange="radCount()" name="p1" type="radio" value="1">3<input onchange="radCount()" name="p1" type="radio" value="2">6</div>
+			<br id="br1">
+			<select id="perk2" onchange="checkPerk('2')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr2"><input onchange="radCount()" name="p2" type="radio" checked value="0">0<input onchange="radCount()" name="p2" type="radio" value="1">3<input onchange="radCount()" name="p2" type="radio" value="2">6</div>
+			<br id="br2">
+			<select id="perk3" onchange="checkPerk('3')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr3"><input onchange="radCount()" name="p3" type="radio" checked value="0">0<input onchange="radCount()" name="p3" type="radio" value="1">3<input onchange="radCount()" name="p3" type="radio" value="2">6</div>
+			<br id="br3">
+			<select id="perk4" onchange="checkPerk('4')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr4"><input onchange="radCount()" name="p4" type="radio" checked value="0">0<input onchange="radCount()" name="p4" type="radio" value="1">3<input onchange="radCount()" name="p4" type="radio" value="2">6</div>
+			<br id="br4">
+			<select id="perk5" onchange="checkPerk('5')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr5"><input onchange="radCount()" name="p5" type="radio" checked value="0">0<input onchange="radCount()" name="p5" type="radio" value="1">3<input onchange="radCount()" name="p5" type="radio" value="2">6</div>
+			<br id="br5">
+			<select id="perk6" onchange="checkPerk('6')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr6"><input onchange="radCount()" name="p6" type="radio" checked value="0">0<input onchange="radCount()" name="p6" type="radio" value="1">3<input onchange="radCount()" name="p6" type="radio" value="2">6</div>
+			<br id="br6">
+			<select id="perk7" onchange="checkPerk('7')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr7"><input onchange="radCount()" name="p7" type="radio" checked value="0">0<input onchange="radCount()" name="p7" type="radio" value="1">3<input onchange="radCount()" name="p7" type="radio" value="2">6</div>
+			<br id="br7">
+			<select id="perk8" onchange="checkPerk('8')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr8"><input onchange="radCount()" name="p8" type="radio" checked value="0">0<input onchange="radCount()" name="p8" type="radio" value="1">3<input onchange="radCount()" name="p8" type="radio" value="2">6</div>
+			<br id="br8">
+			<select id="perk9" onchange="checkPerk('9')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr9"><input onchange="radCount()" name="p9" type="radio" checked value="0">0<input onchange="radCount()" name="p9" type="radio" value="1">3<input onchange="radCount()" name="p9" type="radio" value="2">6</div>
+			<br id="br9">
+			<select id="perk10" onchange="checkPerk('10')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr10"><input onchange="radCount()" name="p10" type="radio" checked value="0">0<input onchange="radCount()" name="p10" type="radio" value="1">3<input onchange="radCount()" name="p10" type="radio" value="2">6</div>
+			<br id="br10">
+			<select id="perk11" onchange="checkPerk('11')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr11"><input onchange="radCount()" name="p11" type="radio" checked value="0">0<input onchange="radCount()" name="p11" type="radio" value="1">3<input onchange="radCount()" name="p11" type="radio" value="2">6</div>
+			<br id="br11">
+			<select id="perk12" onchange="checkPerk('12')">
+				<option value="none" selected></option>
+				<option class="Acidic" value="Acidic">Acidic</option>
+				<option class="Adrenaline" value="Adrenaline">Adrenaline</option>
+				<option class="Aetherborne" value="Aetherborne">Aetherborne</option>
+				<option class="Aetherhunter" value="Aetherhunter">Aetherhunter</option>
+				<option class="Aetheric_Attunement" value="Aetheric_Attunement">Aetheric Attunement</option>
+				<option class="Aetheric_Frenzy" value="Aetheric_Frenzy">Aetheric Frenzy</option>
+				<option class="Agility" value="Agility">Agility</option>
+				<option class="Assassins_Vigour" value="Assassins_Vigour">Assassin's Vigour</option>
+				<option class="Barbed" value="Barbed">Barbed</option>
+				<option class="Bladestorm" value="Bladestorm">Bladestorm</option>
+				<option class="Bloodless" value="Bloodless">Bloodless</option>
+				<option class="Conditioning" value="Conditioning">Conditioning</option>
+				<option class="Conduit" value="Conduit">Conduit</option>
+				<option class="Cunning" value="Cunning">Cunning</option>
+				<option class="Deconstruction" value="Deconstruction">Deconstruction</option>
+				<option class="Endurance" value="Endurance">Endurance</option>
+				<option class="Energized" value="Energized">Energized</option>
+				<option class="Evasion" value="Evasion">Evasion</option>
+				<option class="Evasive_Fury" value="Evasive_Fury">Evasive Fury</option>
+				<option class="Fireproof" value="Fireproof">Fireproof</option>
+				<option class="Fleet" value="Fleet Footed">Fleet Footed</option>
+				<option class="Fortress" value="Fortress">Fortress</option>
+				<option class="Guardian" value="Guardian">Guardian</option>
+				<option class="Iceborne" value="Iceborne">Iceborne</option>
+				<option class="Insulated" value="Insulated">Insulated</option>
+				<option class="Knockout_King" value="Knockout_King">Knockout King</option>
+				<option class="Lucent" value="Lucent">Lucent</option>
+				<option class="Medic" value="Medic">Medic</option>
+				<option class="Merciless" value="Merciless">Merciless</option>
+				<option class="Molten" value="Molten">Molten</option>
+				<option class="Nimble" value="Nimble">Nimble</option>
+				<option class="Nine" value="Nine Lives">Nine Lives</option>
+				<option class="Overpower" value="Overpower">Overpower</option>
+				<option class="Pacifier" value="Pacifier">Pacifier</option>
+				<option class="Predator" value="Predator">Predator</option>
+				<option class="Rage" value="Rage">Rage</option>
+				<option class="Ragehunter" value="Ragehunter">Ragehunter</option>
+				<option class="Savagery" value="Savagery">Savagery</option>
+				<option class="Sharpened" value="Sharpened">Sharpened</option>
+				<option class="Shellshock_Resist" value="Shellshock_Resist">Shellshock Resist</option>
+				<option class="Stunning_Vigour" value="Stunning_Vigour">Stunning Vigour</option>
+				<option class="Sturdy" value="Sturdy">Sturdy</option>
+				<option class="Swift" value="Swift">Swift</option>
+				<option class="Tough" value="Tough">Tough</option>
+				<option class="Vampiric" value="Vampiric">Vampiric</option>
+				<option class="Warmth" value="Warmth">Warmth</option>
+				<option class="Weighted_Strikes" value="Weighted_Strikes">Weighted Strikes</option>
+				<option class="Wild_Frenzy" value="Wild_Frenzy">Wild Frenzy</option>
+			</select>
+			<div style="display: none" id="pr12"><input onchange="radCount()" name="p12" type="radio" checked value="0">0<input onchange="radCount()" name="p12" type="radio" value="1">3<input onchange="radCount()" name="p12" type="radio" value="2">6</div>
+			<br id="br12">
+		</form>
+		<button id="Calc" onclick="wCalc()" style="display:inline" disabled>Calculate</button><p id="left" style="display:inline">Javascript is not working<p>
+		<div id="result"></div>
+	</body>
+</html>
+
+
+<script>
+	for(let i=1; i<13; i++){
+		checkPerk(i)
+	}
+	var Weapondata = [
+		{
+			["type"]: "Axe",
+			["behe"]: "Recruit",
+			["perk"]: "none",
+			["s1"]: "none",
+			["s2"]: "none"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Gnasher",
+			["perk"]: "Ragehunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Shrike",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Quill",
+			["perk"]: "Acidic",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Skarn",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Charr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Ember",
+			["perk"]: "Evasive_Fury",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Screaw",
+			["perk"]: "Nimble",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Drask",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Nayzaga",
+			["perk"]: "Savagery",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Pangar",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Hellion",
+			["perk"]: "Overpower",
+			["s1"]: "Pow",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Storm",
+			["perk"]: "Energized",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Khara",
+			["perk"]: "Deconstruction",
+			["s1"]: "Pow",
+			["s2"]: "Tech"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Reza",
+			["perk"]: "Cunning",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Shrowd",
+			["perk"]: "Cunning",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Koshai",
+			["perk"]: "Sharpened",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Rift",
+			["perk"]: "Wild_Frenzy",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Valomyr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Axe",
+			["behe"]: "Boreus",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Recruit",
+			["perk"]: "none",
+			["s1"]: "none",
+			["s2"]: "none"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Gnasher",
+			["perk"]: "Ragehunter",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Shrike",
+			["perk"]: "Conditioning",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Quill",
+			["perk"]: "Acidic",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Skarn",
+			["perk"]: "Weighted_Strikes",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Charr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Ember",
+			["perk"]: "Evasive_Fury",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Screaw",
+			["perk"]: "Nimble",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Drask",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Tech",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Nayzaga",
+			["perk"]: "Barbed",
+			["s1"]: "Util",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Pangar",
+			["perk"]: "Weighted_Strikes",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Hellion",
+			["perk"]: "Overpower",
+			["s1"]: "Pow",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Storm",
+			["perk"]: "Energized",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Khara",
+			["perk"]: "Bladestorm",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Reza",
+			["perk"]: "Cunning",
+			["s1"]: "Tech",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Shrowd",
+			["perk"]: "Cunning",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Koshai",
+			["perk"]: "Sharpened",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Rift",
+			["perk"]: "Wild_Frenzy",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Valomyr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "ChainBlades",
+			["behe"]: "Boreus",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Recruit",
+			["perk"]: "none",
+			["s1"]: "none",
+			["s2"]: "none"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Gnasher",
+			["perk"]: "Ragehunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Shrike",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Quill",
+			["perk"]: "Acidic",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Skarn",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Charr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Ember",
+			["perk"]: "Evasive_Fury",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Screaw",
+			["perk"]: "Nimble",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Drask",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Nayzaga",
+			["perk"]: "Savagery",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Pangar",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Hellion",
+			["perk"]: "Overpower",
+			["s1"]: "Pow",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Storm",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Khara",
+			["perk"]: "Deconstruction",
+			["s1"]: "Pow",
+			["s2"]: "Tech"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Reza",
+			["perk"]: "Cunning",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Shrowd",
+			["perk"]: "Cunning",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Koshai",
+			["perk"]: "Sharpened",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Rift",
+			["perk"]: "Wild_Frenzy",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Valomyr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Boreus",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Hammer",
+			["behe"]: "Exotic",
+			["perk"]: "none",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Repeater",
+			["behe"]: "Exotic",
+			["perk"]: "none",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Recruit",
+			["perk"]: "none",
+			["s1"]: "none",
+			["s2"]: "none"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Gnasher",
+			["perk"]: "Ragehunter",
+			["s1"]: "Util",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Shrike",
+			["perk"]: "Conditioning",
+			["s1"]: "Mob",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Quill",
+			["perk"]: "Acidic",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Skarn",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Charr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Ember",
+			["perk"]: "Evasive_Fury",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Screaw",
+			["perk"]: "Nimble",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Drask",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Nayzaga",
+			["perk"]: "Barbed",
+			["s1"]: "Util",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Pangar",
+			["perk"]: "Knockout_King",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Hellion",
+			["perk"]: "Overpower",
+			["s1"]: "Pow",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Storm",
+			["perk"]: "Energized",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Khara",
+			["perk"]: "Deconstruction",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Reza",
+			["perk"]: "Cunning",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Shrowd",
+			["perk"]: "Cunning",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Koshai",
+			["perk"]: "Sharpened",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Rift",
+			["perk"]: "Wild_Frenzy",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Valomyr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Boreus",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "Sword",
+			["behe"]: "Exotic",
+			["perk"]: "none",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Recruit",
+			["perk"]: "none",
+			["s1"]: "none",
+			["s2"]: "none"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Gnasher",
+			["perk"]: "Ragehunter",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Shrike",
+			["perk"]: "Conditioning",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Quill",
+			["perk"]: "Acidic",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Skarn",
+			["perk"]: "Weighted_Strikes",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Charr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Ember",
+			["perk"]: "Evasive_Fury",
+			["s1"]: "Pow",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Screaw",
+			["perk"]: "Nimble",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Drask",
+			["perk"]: "Aetheric_Attunement",
+			["s1"]: "Tech",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Nayzaga",
+			["perk"]: "Barbed",
+			["s1"]: "Util",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Pangar",
+			["perk"]: "Weighted_Strikes",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Hellion",
+			["perk"]: "Overpower",
+			["s1"]: "Tech",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Storm",
+			["perk"]: "Energized",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Khara",
+			["perk"]: "Bladestorm",
+			["s1"]: "Tech",
+			["s2"]: "Mob"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Reza",
+			["perk"]: "Cunning",
+			["s1"]: "Tech",
+			["s2"]: "Pow"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Shrowd",
+			["perk"]: "Cunning",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Koshai",
+			["perk"]: "Sharpened",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Rift",
+			["perk"]: "Wild_Frenzy",
+			["s1"]: "Tech",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Valomyr",
+			["perk"]: "Aetherhunter",
+			["s1"]: "Pow",
+			["s2"]: "Util"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Boreus",
+			["perk"]: "Conditioning",
+			["s1"]: "Pow",
+			["s2"]: "Def"
+		},
+		{
+			["type"]: "WarPike",
+			["behe"]: "Exotic",
+			["perk"]: "none",
+			["s1"]: "Pow",
+			["s2"]: "Tech"
+		}
+	]
+	var Perkdata = [
+		{
+			["name"]: "Acidic",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Adrenaline",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Aetherborne",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Aetherhunter",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Aetheric_Attunement",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Aetheric_Frenzy",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Agility",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Assassins_Vigour",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Barbed",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Bladestorm",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Bloodless",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Conditioning",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Conduit",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Cunning",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Deconstruction",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Endurance",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Energized",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Evasion",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Evasive_Fury",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Fireproof",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Fleet_Footed",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Fortress",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Guardian",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Iceborne",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Insulated",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Knockout_King",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Lucent",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Medic",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Merciless",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Molten",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Nimble",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Nine_Lives",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Overpower",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Pacifier",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Predator",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Rage",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Ragehunter",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Savagery",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Sharpened",
+			["type"]: "Pow",
+			["value"]: 0
+		},
+		{
+			["name"]: "Shellshock_Resist",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Stunning_Vigour",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Sturdy",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Swift",
+			["type"]: "Mob",
+			["value"]: 0
+		},
+		{
+			["name"]: "Tough",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Vampiric",
+			["type"]: "Util",
+			["value"]: 0
+		},
+		{
+			["name"]: "Warmth",
+			["type"]: "Def",
+			["value"]: 0
+		},
+		{
+			["name"]: "Weighted_Strikes",
+			["type"]: "Tech",
+			["value"]: 0
+		},
+		{
+			["name"]: "Wild_Frenzy",
+			["type"]: "Tech",
+			["value"]: 0
+		}
+	]
+	var Armordata = [
+		{
+			["name"]: "Gnasher_Cap",
+			["perk"]: "Bloodless",
+			["slot"]: "Def",
+			["ele"]: "none",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Gnasher_Cloak",
+			["perk"]: "Tough",
+			["slot"]: "Def",
+			["ele"]: "none",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Gnasher_Grips",
+			["perk"]: "Ragehunter",
+			["slot"]: "Pow",
+			["ele"]: "none",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Gnasher_Treads",
+			["perk"]: "Tough",
+			["slot"]: "Pow",
+			["ele"]: "none",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Shrikedown_Helm",
+			["perk"]: "Evasion",
+			["slot"]: "Tech",
+			["ele"]: "none",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Shrikedown_Plate",
+			["perk"]: "Evasion",
+			["slot"]: "Mob",
+			["ele"]: "none",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Shrikedown_Gloves",
+			["perk"]: "Weighted_Strikes",
+			["slot"]: "Mob",
+			["ele"]: "none",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Shrikedown_Greaves",
+			["perk"]: "Bloodless",
+			["slot"]: "Mob",
+			["ele"]: "none",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Quillspike_Mask",
+			["perk"]: "Savagery",
+			["slot"]: "Def",
+			["ele"]: "none",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Quillspike_Jacket",
+			["perk"]: "Savagery",
+			["slot"]: "Tech",
+			["ele"]: "none",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Quillspike_Grips",
+			["perk"]: "Barbed",
+			["slot"]: "Tech",
+			["ele"]: "none",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Quillspike_Boots",
+			["perk"]: "Shellshock_Resist",
+			["slot"]: "Tech",
+			["ele"]: "none",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Sight_of_Stone",
+			["perk"]: "Tough",
+			["slot"]: "Def",
+			["ele"]: "Terra",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Heart_of_Stone",
+			["perk"]: "Guardian",
+			["slot"]: "Def",
+			["ele"]: "Terra",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Might_of_Stone",
+			["perk"]: "Fortress",
+			["slot"]: "Def",
+			["ele"]: "Terra",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Pillars_of_Stone",
+			["perk"]: "Guardian",
+			["slot"]: "Def",
+			["ele"]: "Terra",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Volcanic_Helm",
+			["perk"]: "Fireproof",
+			["slot"]: "Def",
+			["ele"]: "Fire",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Volcanic_Aegis",
+			["perk"]: "Aetherhunter",
+			["slot"]: "Util",
+			["ele"]: "Fire",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Volcanic_Grips",
+			["perk"]: "Rage",
+			["slot"]: "Util",
+			["ele"]: "Fire",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Volcanic_Treads",
+			["perk"]: "Rage",
+			["slot"]: "Pow",
+			["ele"]: "Fire",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Fiery_Helm",
+			["perk"]: "Evasive_Fury",
+			["slot"]: "Mob",
+			["ele"]: "Fire",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Fiery_Breastplate",
+			["perk"]: "Evasive_Fury",
+			["slot"]: "Mob",
+			["ele"]: "Fire",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Fiery_Gauntlets",
+			["perk"]: "Fireproof",
+			["slot"]: "Tech",
+			["ele"]: "Fire",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Fiery_Greaves",
+			["perk"]: "Evasion",
+			["slot"]: "Def",
+			["ele"]: "Fire",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Skraevwing_Helmet",
+			["perk"]: "Fleet_Footed",
+			["slot"]: "Mob",
+			["ele"]: "Ice",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Skraevwing_Jacket",
+			["perk"]: "Adrenaline",
+			["slot"]: "Mob",
+			["ele"]: "Ice",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Skraevwing_Gloves",
+			["perk"]: "Warmth",
+			["slot"]: "Mob",
+			["ele"]: "Ice",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Skraevwing_Boots",
+			["perk"]: "Adrenaline",
+			["slot"]: "Util",
+			["ele"]: "Ice",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Draskscale_Helmet",
+			["perk"]: "Aetheric_Attunement",
+			["slot"]: "Pow",
+			["ele"]: "Shock",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Draskscale_Plate",
+			["perk"]: "Aetheric_Attunement",
+			["slot"]: "Pow",
+			["ele"]: "Shock",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Draskscale_Gauntlets",
+			["perk"]: "Sharpened",
+			["slot"]: "Util",
+			["ele"]: "Shock",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Draskscale_Greaves",
+			["perk"]: "Fleet_Footed",
+			["slot"]: "Util",
+			["ele"]: "Shock",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Shocking_Gaze",
+			["perk"]: "Medic",
+			["slot"]: "Util",
+			["ele"]: "Shock",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Shocking_Heart",
+			["perk"]: "Medic",
+			["slot"]: "Def",
+			["ele"]: "Shock",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Shocking_Grasp",
+			["perk"]: "Aetheric_Attunement",
+			["slot"]: "Util",
+			["ele"]: "Shock",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Shocking_Stride",
+			["perk"]: "Insulated",
+			["slot"]: "Def",
+			["ele"]: "Shock",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Brow_of_Ice",
+			["perk"]: "Knockout_King",
+			["slot"]: "Pow",
+			["ele"]: "Ice",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Core_of_Ice",
+			["perk"]: "Fortress",
+			["slot"]: "Pow",
+			["ele"]: "Ice",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Arms_of_Ice",
+			["perk"]: "Knockout_King",
+			["slot"]: "Def",
+			["ele"]: "Ice",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Feet_of_Ice",
+			["perk"]: "Warmth",
+			["slot"]: "Def",
+			["ele"]: "Ice",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Hellplate_Casque",
+			["perk"]: "Ragehunter",
+			["slot"]: "Tech",
+			["ele"]: "Fire",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Hellplate_Cuirass",
+			["perk"]: "Molten",
+			["slot"]: "Tech",
+			["ele"]: "Fire",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Hellplate_Bracers",
+			["perk"]: "Molten",
+			["slot"]: "Pow",
+			["ele"]: "Fire",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Hellplate_Greaves",
+			["perk"]: "Fortress",
+			["slot"]: "Pow",
+			["ele"]: "Fire",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Lightning_Helm",
+			["perk"]: "Energized",
+			["slot"]: "Tech",
+			["ele"]: "Shock",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Lightning_Plate",
+			["perk"]: "Energized",
+			["slot"]: "Mob",
+			["ele"]: "Shock",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Lightning_Gloves",
+			["perk"]: "Insulated",
+			["slot"]: "Mob",
+			["ele"]: "Shock",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Lightning_Boots",
+			["perk"]: "Aetheric_Frenzy",
+			["slot"]: "Mob",
+			["ele"]: "Shock",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Eye of the Swarm",
+			["perk"]: "Shellshock_Resist",
+			["slot"]: "Mob",
+			["ele"]: "Terra",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Shell of the Swarm",
+			["perk"]: "Bladestorm",
+			["slot"]: "Tech",
+			["ele"]: "Terra",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Clutches of the Swarm",
+			["perk"]: "Conditioning",
+			["slot"]: "Mob",
+			["ele"]: "Terra",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Dance of the Swarm",
+			["perk"]: "Conditioning",
+			["slot"]: "Pow",
+			["ele"]: "Terra",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Light's Crown",
+			["perk"]: "Conduit",
+			["slot"]: "Tech",
+			["ele"]: "Radiant",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Light's Virtue",
+			["perk"]: "Cunning",
+			["slot"]: "Util",
+			["ele"]: "Radiant",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Light's Refuge",
+			["perk"]: "Conduit",
+			["slot"]: "Tech",
+			["ele"]: "Radiant",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Light's Walk",
+			["perk"]: "Agility",
+			["slot"]: "Mob",
+			["ele"]: "Radiant",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Dark_Watch",
+			["perk"]: "Rage",
+			["slot"]: "Pow",
+			["ele"]: "Umbral",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Dark_Marrow",
+			["perk"]: "Rage",
+			["slot"]: "Pow",
+			["ele"]: "Umbral",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Dark_Embrace",
+			["perk"]: "Medic",
+			["slot"]: "Util",
+			["ele"]: "Umbral",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Dark_Path",
+			["perk"]: "Nine_Lives",
+			["slot"]: "Util",
+			["ele"]: "Umbral",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Visage_of_Thorns",
+			["perk"]: "Agility",
+			["slot"]: "Tech",
+			["ele"]: "Terra",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Mantle_of_Thorns",
+			["perk"]: "Predator",
+			["slot"]: "Util",
+			["ele"]: "Terra",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Grasp_of_Thorns",
+			["perk"]: "Evasive_Fury",
+			["slot"]: "Pow",
+			["ele"]: "Terra",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Stride_of_Thorns",
+			["perk"]: "Predator",
+			["slot"]: "Util",
+			["ele"]: "Terra",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Guise of the Rift",
+			["perk"]: "Aetheric_Attunement",
+			["slot"]: "Util",
+			["ele"]: "Umbral",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Mantle of the Rift",
+			["perk"]: "Conduit",
+			["slot"]: "Util",
+			["ele"]: "Umbral",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Hands of the Rift",
+			["perk"]: "Evasion",
+			["slot"]: "Mob",
+			["ele"]: "Umbral",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Striders of the Rift",
+			["perk"]: "Conduit",
+			["slot"]: "Mob",
+			["ele"]: "Umbral",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Crest_of_Valour",
+			["perk"]: "Lucent",
+			["slot"]: "Pow",
+			["ele"]: "Radiant",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Aegis_of_Valour",
+			["perk"]: "Nine_Lives",
+			["slot"]: "Pow",
+			["ele"]: "Radiant",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Gauntlets_of_Valour",
+			["perk"]: "Lucent",
+			["slot"]: "Def",
+			["ele"]: "Radiant",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Greaves_of_Valour",
+			["perk"]: "Aetherhunter",
+			["slot"]: "Util",
+			["ele"]: "Radiant",
+			["type"]: "Boots"
+		},
+		{
+			["name"]: "Boreal_Epiphany",
+			["perk"]: "Conditioning",
+			["slot"]: "Util",
+			["ele"]: "Ice",
+			["type"]: "Helm"
+		},
+		{
+			["name"]: "Boreal_Resolve",
+			["perk"]: "Rage",
+			["slot"]: "Def",
+			["ele"]: "Ice",
+			["type"]: "Armor"
+		},
+		{
+			["name"]: "Boreal_Might",
+			["perk"]: "Rage",
+			["slot"]: "Pow",
+			["ele"]: "Ice",
+			["type"]: "Gloves"
+		},
+		{
+			["name"]: "Boreal_March",
+			["perk"]: "Iceborne",
+			["slot"]: "Tech",
+			["ele"]: "Ice",
+			["type"]: "Boots"
+		}
+	]
+	var weapon
+	wTc()
+	function wTc(){
+		var temp = document.getElementById('Weapon_Type').value;
+		document.getElementById(temp).style.display = "inline"
+		for(var i=0; i< document.getElementsByClassName("types").length; i++){
+			if(document.getElementById(temp) != document.getElementsByClassName("types")[i]){
+				document.getElementsByClassName("types")[i].style.display = "none"
+				document.getElementsByClassName("types")[i].value = "Recruit"
+			}
+		}
+		for(var i=0; i < Weapondata.length; i++){
+			if (((Weapondata[i].type === document.getElementById("Weapon_Type").value)&&(Weapondata[i].behe === document.getElementById(document.getElementById("Weapon_Type").value).value))){
+				weapon = Weapondata[i]
+			}
+		}
+		document.getElementById("perk1show").disabled = false
+		document.getElementById("perk1show").value = weapon.perk
+		if(weapon.perk != "none"){
+			var l = 1
+			for(var k=2; k<13; k++){
+				if(document.getElementById("perk" + k).value == weapon.perk){
+					if(document.querySelector("input[name='p"+k+"'][value='2']").checked){
+						l = 2
+					}
+					document.getElementById("perk" + k).value = "none"
+					checkPerk(k)
+				}
+				document.querySelector("input[name='p1'][value='"+l+"']").checked = true
+			}
+		}
+		document.getElementById("perk1").value = document.getElementById("perk1show").value
+		document.getElementById("perk1show").disabled = true
+		console.log("Weapon Perk: " + document.getElementById("perk1").value)
+		checkPerk('1')
+		radCount()
+	}
+	function checkPerk(perk){
+		if(document.getElementById("perk" + perk).value == "none"){
+			document.querySelector("input[name='p"+ perk +"'][value='0']").checked = true
+			document.getElementById("pr" + perk).style.display = "none"
+		}else{
+			document.getElementById("pr" + perk).style.display = "inline"
+		}
+		for(var a=0; a<1; a++){
+			for(var i=0; i<document.querySelectorAll("option").length;i++){
+				document.querySelectorAll("option")[i].disabled = false
+			}
+			for(var k=1; k<13; k++){
+				for(var i=0; i< document.getElementsByClassName(document.getElementById("perk" + k).value).length; i++){
+					document.getElementsByClassName(document.getElementById("perk" + k).value)[i].disabled = true
+				}
+			}
+		}
+		for(var counter=12; counter>2; counter--){
+			if(document.getElementById("perk" + (counter-1)).value == "none"){
+				document.getElementById("perk" + counter).style.display = "none"
+				document.getElementById("br" + counter).style.display = "none"
+			}else{
+				document.getElementById("perk" + counter).style.display = "inline"
+				document.getElementById("br" + counter).style.display = "inline"
+				break
+			}
+		}
+	}
+	function radCount(){
+		for(var a=0; a<1; a++){
+			var points = 0
+			switch(document.getElementById(document.getElementById('Weapon_Type').value).value){
+				case "Recruit":
+					points +=2
+				case "Exotic":
+					points++
+			}
+			if(document.getElementById('helm').value != "none"){
+				points++
+			}
+			for(var i=0; i<document.querySelectorAll("input[type='radio']").length;i++){
+				if(document.querySelectorAll("input[type='radio']")[i].checked){
+					points += parseInt(document.querySelectorAll("input[type='radio']")[i].value)
+				}
+			}
+			for(var k=1; k<13; k++){
+				for(var i=0; i<document.getElementById("pr" + k).childNodes.length;i++){
+					document.getElementById("pr" + k).childNodes[i].disabled = false
+				}
+			}
+			console.log("Points spend (max 12): " + points)
+			document.getElementById("left").innerHTML = ((12-points)*3) + " Perks left!"
+			for(var k=1; k<13; k++){
+				if(points > 10){					
+					if(!(document.querySelector("input[name='p"+k+"'][value='2']").checked || document.querySelector("input[name='p"+k+"'][value='1']").checked)){
+						document.querySelector("input[name='p"+k+"'][value='2']").disabled = true
+					}
+					if(points == 12){
+						if(document.querySelector("input[name='p"+k+"'][value='0']").checked){
+							document.querySelector("input[name='p"+k+"'][value='1']").disabled = true
+						}
+						if(document.querySelector("input[name='p"+k+"'][value='1']").checked){
+							document.querySelector("input[name='p"+k+"'][value='2']").disabled = true
+						}
+					}
+				}
+			}
+			if(weapon.perk != "none"){
+				document.querySelector("input[name='p1'][value='0']").disabled = true
+			}else{
+				document.querySelector("input[name='p1'][value='0']").checked = true
+				document.querySelector("input[name='p1'][value='0']").disabled = false
+			}
+			if(points > 5){
+				document.getElementById("Calc").disabled = false
+			}else{
+				document.getElementById("Calc").disabled = true
+			}
+		}
+	}
+	function wCalc(){
+		console.time()
+		document.getElementById("result").innerHTML = ""
+		for(var a=0; a<1; a++){
+			var value
+			var name
+			var count = 1
+			var perks = []
+			for(var k=1; k<13; k++){
+				if(!document.querySelector("input[name='p"+k+"'][value='0']").checked){
+					if(document.querySelector("input[name='p"+k+"'][value='1']").checked){
+						value = 1
+					}
+					if(document.querySelector("input[name='p"+k+"'][value='2']").checked){
+						value = 2
+					}
+					var perkc
+					for(var i=0; i<Perkdata.length; i++){
+						if(Perkdata[i].name == document.getElementById("perk" + k).value){
+							perkc = Perkdata[i]
+							perkc.value = value
+							break
+						}
+					}
+					perks.push(perkc)
+				}
+			}
+			console.log(perks)
+			var atemp = []
+			for(var i=0; i<Armordata.length; i++){
+				for(var o=0; o<perks.length; o++){
+					if(true){
+						atemp.push(Armordata[i])
+						break
+					}
+				}
+			}
+			var helm = []
+			var armor = []
+			var gloves = []
+			var boots = []
+			for(var i=0; i<atemp.length; i++){
+				switch(atemp[i].type){
+					case "Helm":
+						helm.push(atemp[i])
+						break
+					case "Armor":
+						armor.push(atemp[i])
+						break
+					case "Gloves":
+						gloves.push(atemp[i])
+						break
+					case "Boots":
+						boots.push(atemp[i])
+				}
+			}
+			switch(document.getElementById('helm').value){
+				case "Reza":
+					helm = [
+						{
+							["name"]: "Prismatic_Grace",
+							["perk"]: "none",
+							["slot"]: "Tech",
+							["ele"]: "Radiant",
+							["type"]: "Helm"
+						}
+					]
+					break
+				case "Shrowd":
+					helm = [
+						{
+							["name"]: "Tragic_Echo",
+							["perk"]: "none",
+							["slot"]: "Pow",
+							["ele"]: "Umbral",
+							["type"]: "Helm"
+						}
+					]
+					break
+				case "Charr":
+					helm = [
+						{
+							["name"]: "The_Skullforge",
+							["perk"]: "none",
+							["slot"]: "Def",
+							["ele"]: "Fire",
+							["type"]: "Helm"
+						}
+					]
+			}
+			console.log("!-!")
+			console.log(helm)
+			console.log(armor)
+			console.log(gloves)
+			console.log(boots)
+			console.log("!-!")
+			var non = true
+			clearRes()
+			var resC = 1
+			for(var hc=0; hc<helm.length; hc++){
+				for(var ac=0; ac<armor.length; ac++){
+					for(var gc=0; gc<gloves.length; gc++){
+						for(var bc=0; bc<boots.length; bc++){
+							var pt = JSON.parse(JSON.stringify(perks))
+							for(var i=0; i<pt.length; i++){
+								if(pt[i].name == helm[hc].perk){
+									pt[i].value--
+									break
+								}
+							}
+							for(var i=0; i<pt.length; i++){
+								if(pt[i].name == armor[ac].perk){
+									pt[i].value--
+									break
+								}
+							}
+							for(var i=0; i<pt.length; i++){
+								if(pt[i].name == gloves[gc].perk){
+									pt[i].value--
+									break
+								}
+							}
+							for(var i=0; i<pt.length; i++){
+								if(pt[i].name == boots[bc].perk){
+									pt[i].value--
+									break
+								}
+							}
+							if(weapon.perk != "none"){
+								for(var i=0; i<pt.length; i++){
+									if(pt[i].name == weapon.perk){
+										pt[i].value--
+										break
+									}
+								}
+							}
+							var prest = {
+								["tech"]: 0,
+								["pow"]: 0,
+								["util"]: 0,
+								["def"]: 0,
+								["mob"]: 0
+							}
+							var aslot = {}
+							Object.assign(aslot, prest)
+							for(var i=0; i<pt.length; i++){
+								switch(pt[i].type){
+									case "Tech":
+										switch(pt[i].value){
+											case 2:
+												prest.tech++
+											case 1:
+												prest.tech++
+										}
+										break
+									case "Pow":
+										switch(pt[i].value){
+											case 2:
+												prest.pow++
+											case 1:
+												prest.pow++
+										}
+										break
+									case "Util":
+										switch(pt[i].value){
+											case 2:
+												prest.util++
+											case 1:
+												prest.util++
+										}
+										break
+									case "Def":
+										switch(pt[i].value){
+											case 2:
+												prest.def++
+											case 1:
+												prest.def++
+										}
+										break
+									case "Mob":
+										switch(pt[i].value){
+											case 2:
+												prest.mob++
+											case 1:
+												prest.mob++
+										}
+								}
+							}
+							aslot.util++
+							for(var osl of [weapon.s1,weapon.s2,helm[hc].slot,armor[ac].slot,gloves[gc].slot,boots[bc].slot]){
+								switch(osl){
+									case "Tech":
+										aslot.tech++
+										break
+									case "Pow":
+										aslot.pow++
+										break
+									case "Util":
+										aslot.util++
+										break
+									case "Def":
+										aslot.def++
+										break
+									case "Mob":
+										aslot.mob++
+								}
+							}
+							if((prest.tech <= aslot.tech) && (prest.pow <= aslot.pow) && (prest.util <= aslot.util) && (prest.def <= aslot.def) && (prest.mob <= aslot.mob)){
+                                //console.log("!!!")
+                                //console.log([helm[hc],armor[ac],gloves[gc],boots[bc]])
+                                //console.log("!!!")
+								output(helm[hc],armor[ac],gloves[gc],boots[bc],pt,resC)
+								resC++
+								non = false
+							}
+						}
+					}
+				}
+			}
+			if(non){
+				clearRes()
+				aChild("P", "No Set found!!", null, "result")
+			}
+		}
+		if(resC >20){
+			document.getElementById("console").innerHTML = (resC + " Sets Found only Showing 20! Please select more Perks!")
+		}else{
+			document.getElementById("console").innerHTML = ""
+		}
+		console.timeEnd()
+	}
+	function output(heo, aro, glo, boo, peo, idC){
+		if(idC <=20){
+			for(var b=0; b<1;b++){
+				aChild("TABLE", null, "resT", "result")
+				aChild("TR", null, ("ths" + idC), "resT")
+				aChild("TH", "Helm", null, ("ths" + idC))
+				aChild("TH", "Armor", null, ("ths" + idC))
+				aChild("TH", "Gloves", ("colh" + idC), ("ths" + idC))
+				document.getElementById(("colh" + idC)).colSpan = 2
+				aChild("TH", "Boots", null, ("ths" + idC))
+				aChild("TH", "Lantern", null, ("ths" + idC))
+				aChild("TR", null, ("partT" + idC), "resT")
+				aChild("TD", null, ("h" + idC), ("partT" + idC))
+				aChild("TD", null, ("a" + idC), ("partT" + idC))
+				aChild("TD", null, ("g" + idC), ("partT" + idC))
+				document.getElementById(("g" + idC)).colSpan = 2
+				aChild("TD", null, ("b" + idC), ("partT" + idC))
+				aChild("TD", "Lantern", null, ("partT" + idC))
+				aChild("TR", null, ("perkT" + idC), "resT")
+				aChild("TD", null, ("hp" + idC), ("perkT" + idC))
+				aChild("TD", null, ("ap" + idC), ("perkT" + idC))
+				aChild("TD", null, ("gp" + idC), ("perkT" + idC))
+				document.getElementById(("gp" + idC)).colSpan = 2
+				aChild("TD", null, ("bp" + idC), ("perkT" + idC))
+				aChild("TD", null, ("lp" + idC), ("perkT" + idC))
+				aChild("TR", null, ("wpr" + idC), ("resT"))
+				aChild("TH", "Weapon", ("wph" + idC), ("wpr" + idC))
+				document.getElementById(("wph" + idC)).colSpan = 6
+				aChild("TR", null, ("perkWT" + idC), "resT")
+				aChild("TD", null, ("s1p" + idC), ("perkWT" + idC))
+				document.getElementById(("s1p" + idC)).colSpan = 3
+				aChild("TD", null, ("s2p" + idC), ("perkWT" + idC))
+				document.getElementById(("s2p" + idC)).colSpan = 3
+				aChild("TR", null, ("sep" + idC), "resT")
+				aChild("TD", null, ("sepd" + idC), ("sep" + idC))
+				document.getElementById(("sepd" + idC)).colSpan = 6
+				document.getElementById(("sepd" + idC)).style.textAlign = "center"
+				
+				document.getElementById(("h" + idC)).innerHTML = heo.name.split('_').join(' ')
+				document.getElementById(("a" + idC)).innerHTML = aro.name.split('_').join(' ')
+				document.getElementById(("g" + idC)).innerHTML = glo.name.split('_').join(' ')
+				document.getElementById(("b" + idC)).innerHTML = boo.name.split('_').join(' ')
+				let empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == heo.slot && peo[p].value>0){
+						document.getElementById(("hp" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("hp" + idC)).innerHTML = ("Empty: " + heo.slot)
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == aro.slot && peo[p].value>0){
+						document.getElementById(("ap" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("ap" + idC)).innerHTML = ("Empty: " + aro.slot)
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == glo.slot && peo[p].value>0){
+						document.getElementById(("gp" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("gp" + idC)).innerHTML = ("Empty: " + glo.slot)
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == boo.slot && peo[p].value>0){
+						document.getElementById(("bp" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("bp" + idC)).innerHTML = ("Empty: " + boo.slot)
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == "Util" && peo[p].value>0){
+						document.getElementById(("lp" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("lp" + idC)).innerHTML = "Empty: Util"
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == weapon.s1 && peo[p].value>0){
+						document.getElementById(("s1p" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("s1p" + idC)).innerHTML = ("Empty: " + weapon.s1)
+				}
+				empty = true
+				for(var p=0; p<peo.length; p++){
+					if(peo[p].type == weapon.s2 && peo[p].value>0){
+						document.getElementById(("s2p" + idC)).innerHTML = (peo[p].name.split('_').join(' ') + " Cell")
+						peo[p].value--
+						empty = false
+						break;
+					}
+				}
+				if(empty){
+					document.getElementById(("s2p" + idC)).innerHTML = ("Empty: " + weapon.s2)
+				}
+				let tele = {
+					["Terra"]: 0,
+					["Fire"]: 0,
+					["Ice"]: 0,
+					["Shock"]: 0,
+					["Radiant"]: 0,
+					["Umbral"]: 0
+				}
+				for(var eles of [heo.ele, aro.ele, glo.ele, boo.ele]){
+					switch(eles){
+					case "Terra":
+						tele.Terra++
+						tele.Shock--
+						break;
+					case "Fire":
+						tele.Fire++
+						tele.Ice--
+						break;
+					case "Ice":
+						tele.Ice++
+						tele.Fire--
+						break;
+					case "Shock":
+						tele.Shock++
+						tele.Terra--
+						break;
+					case "Radiant":
+						tele.Radiant++
+						tele.Umbral--
+						break;
+					case "Umbral":
+						tele.Umbral++
+						tele.Radiant--
+					}
+				}
+				let teleString = "Resistances: "
+				if(tele.Fire !=0){
+					teleString += ("Fire: " + (tele.Fire * 100) + ",  ")
+				}
+				if(tele.Ice !=0){
+					teleString += ("Ice: " + (tele.Ice * 100) + ",  ")
+				}
+				if(tele.Terra !=0){
+					teleString += ("Terra: " + (tele.Terra * 100) + ",  ")
+				}
+				if(tele.Shock !=0){
+					teleString += ("Shock: " + (tele.Shock * 100) + ",  ")
+				}
+				if(tele.Radiant !=0){
+					teleString += ("Radiant: " + (tele.Radiant * 100) + ",  ")
+				}
+				if(tele.Umbral !=0){
+					teleString += ("Umbral: " + (tele.Umbral * 100) + ",  ")
+				}
+				document.getElementById(("sepd" + idC)).innerHTML = teleString
+			}
+		}
+	}
+	function aChild(ntype, ntext, nId, tId){
+		for(var c=0; c<1; c++){
+			var nodetype = document.createElement(ntype)
+			if(ntext != null){
+				nodetype.innerHTML = ntext
+			}
+			if(nId != null){
+				nodetype.id = nId
+			}
+			document.getElementById(tId).appendChild(nodetype)
+		}
+	}
+	function clearRes(){
+			while(0<document.getElementById("result").childNodes.length){
+				document.getElementById("result").removeChild(document.getElementById("result").childNodes[0]);
+			}
+	}
+</script>
